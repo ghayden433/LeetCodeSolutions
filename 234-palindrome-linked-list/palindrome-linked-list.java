@@ -10,11 +10,10 @@
  */
 class Solution {
     public boolean isPalindrome(ListNode head) {
-        StringBuilder obv = new StringBuilder();
-        StringBuilder rev = new StringBuilder();
+        String obv = "";
 
         while (head != null){
-            obv = obv.append(head.val);
+            obv = obv + head.val;
             head = head.next;
         }
 
