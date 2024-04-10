@@ -12,7 +12,7 @@ class Solution {
     public boolean isPalindrome(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
-        if (head == null || head.next == null) return true;
+        if (head == null || head.next == null) return true; 
 
 
 
