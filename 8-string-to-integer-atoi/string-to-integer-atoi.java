@@ -5,7 +5,7 @@ class Solution {
         int resultInt = 0;
 
 
-        while (i < s.length() && s.charAt(i) == ' ') i++;
+        s = s.trim();
         if (i < s.length() && (s.charAt(i) == '-' || s.charAt(i) == '+')) {
             if (s.charAt(i) == '-'){
                 result += "-";
