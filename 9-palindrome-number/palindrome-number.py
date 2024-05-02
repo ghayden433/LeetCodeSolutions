@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: bool
         """
         if ((str(x)[::-1]) == str(x)):
-            return True
-            
+            return True 
         return False
         
