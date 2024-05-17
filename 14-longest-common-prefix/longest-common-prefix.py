@@ -14,7 +14,7 @@ class Solution(object):
             for i in range(len(strs)):
                 if strs[i][j] != least[j]:
                     return result
-            result = result + least[j]
+            result = result + least[j] 
 
         return result
 
