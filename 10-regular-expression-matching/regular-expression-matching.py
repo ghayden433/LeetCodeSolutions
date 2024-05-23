@@ -10,7 +10,7 @@ class Solution:
 
             #base cases
             #if i and j are out of bounds the string matches
-            if i >= len(s) and j >= len(p): 
+            if i >= len(s) and j >= len(p):
                 return True
             #if just j is out of bounds it does not match as there is still string left and no pattern
             if j >= len(p): 
