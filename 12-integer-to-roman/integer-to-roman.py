@@ -11,7 +11,7 @@ class Solution(object):
                 if ((num - romanCon[i]) >= 0):
                     result = result + romanCon[i + 1]
                     num = num - romanCon[i]
-                    break 
+                    break
         
         return result
         
