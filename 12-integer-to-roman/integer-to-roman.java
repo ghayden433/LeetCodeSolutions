@@ -7,7 +7,7 @@ class Solution {
             if ((num - numbers[i]) >= 0){
                 result = result + numerals[i];
                 num = num - numbers[i];
-                i++;
+                i++; 
             }
         }
         return result;
