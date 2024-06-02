@@ -11,4 +11,4 @@ class Solution(object):
             if nums[i] in hashmap:
                 return[i, hashmap[nums[i]]]
             else:
-                hashmap[target - nums[i]] = i 
+                hashmap[target - nums[i]] = i
