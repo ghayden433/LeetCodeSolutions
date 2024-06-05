@@ -6,7 +6,7 @@ class Solution(object):
         """
         if digits == "":
             return {}
-        result = list() 
+        result = list()
         pointers = [0] * len(digits)
         letters = ["", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]
         while pointers[0] < len(letters[int(digits[0])]):
