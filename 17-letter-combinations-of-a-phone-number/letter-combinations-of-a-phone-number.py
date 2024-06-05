@@ -1,5 +1,9 @@
-class Solution:
-    def letterCombinations(self, digits: str) -> List[str]:
+class Solution(object):
+    def letterCombinations(self, digits):
+        """
+        :type digits: str
+        :rtype: List[str]
+        """
         if digits == "":
             return {}
         result = list()
