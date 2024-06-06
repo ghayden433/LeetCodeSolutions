@@ -5,10 +5,11 @@ class Solution(object):
         :rtype: bool
         """
         match = { "(": ")", "[": "]", "{": "}"}
+        matchkeys = "([{"
         result = [""]
 
         for i in range (len(s)):
-            if s[i] in match.keys():
+            if s[i] in matchkeys:
                 result.append(match[s[i]])
             elif s[i] == result[-1]:
                 result.pop()
