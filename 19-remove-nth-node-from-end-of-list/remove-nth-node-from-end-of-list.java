@@ -28,7 +28,7 @@ class Solution {
         }
 
         if (head.next != null){
-            head.next = head.next.next;
+            head.next = head.next.next; 
             return result;
         }
         else{
