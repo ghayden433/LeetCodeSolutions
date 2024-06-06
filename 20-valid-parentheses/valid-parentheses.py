@@ -4,22 +4,15 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        def find(list, item):
-            for i in range(len(list)):
-                if list[i] == item:
-                    return i
-            return -1; 
-
+        match = { "(": ")", "[": "]", "{": "}"}
         result = [""]
-        paraOpen = ["(", "[", "{"]
-        paraClose = [")", "]", "}"]
 
         for i in range (len(s)):
-            if s[i] in paraOpen:
-                result.append(s[i])
-            elif find(paraClose, s[i]) == find(paraOpen, result[len(result) - 1]):
-                result.pop(len(result) - 1)
+            if s[i] in match.keys():
+                result.append(match[s[i]])
+            elif s[i] == result[-1]:
+                result.pop()
             else:
-                result.append(s[i])
+                return False
             
         return result == [""]
