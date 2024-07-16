@@ -13,6 +13,6 @@ class Solution(object):
             else:
                 top[num] = 1
         result = [(v, h) for h, v in top.items()]
-        print(result.sort(reverse = True))
+        result.sort(reverse = True)
         return(([h[1] for h in result])[:k])
         
