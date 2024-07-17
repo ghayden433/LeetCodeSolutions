@@ -4,15 +4,16 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        s2 = ""
-        for letter in s:
-            if letter.isalnum():
-                s2 = s2 + letter.lower()
-
         left = 0
-        right = len(s2) - 1
+        right = len(s) - 1
         while left <= right:
-            if s2[left] == s2[right]:
+            #skip over the non alphanumeric chars
+            while left < right and not s[left].isalnum():
+                left += 1
+            while left < right and not s[right].isalnum():
+                right -= 1
+    
+            if s[left].lower() == s[right].lower():
                 left+= 1
                 right-= 1
             else:
