@@ -14,6 +14,6 @@ class Solution(object):
                 return [l + 1, r + 1]
             if total > target:
                 r-= 1
-            if total < target:
+            else:
                 l+= 1
          
