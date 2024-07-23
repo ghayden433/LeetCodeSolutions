@@ -4,17 +4,13 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        maxFuture = [0] * len(prices)
-        most = 0
+        currMin = 11000
         maxProfit = 0
-        for i in range(len(prices)):
-            if prices[len(prices) - i - 1] > most:
-                most = prices[len(prices) - i - 1] 
-            maxFuture[len(maxFuture) - i - 1] = most
-        
-        for i in range(len(prices)):
-            if maxFuture[i] - prices[i] > maxProfit:
-                maxProfit = maxFuture[i] - prices[i]
+        for price in prices:
+            if price < currMin:
+                currMin = price
+            if price - currMin > maxProfit:
+                maxProfit = price - currMin
 
         return maxProfit
 
