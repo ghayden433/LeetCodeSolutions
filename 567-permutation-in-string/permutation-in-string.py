@@ -5,11 +5,35 @@ class Solution(object):
         :type s2: str
         :rtype: bool
         """
-        sorteds1 = ''.join(sorted(s1))
-        for i in range(len(s2) - len(s1) + 1):
-            if s2[i] in s1:
-                if ''.join(sorted(s2[i:(i + len(s1))])) == sorteds1:
-                    return True
-        
-        return False
+        def val():
+            return 0
+        s1Map = defaultdict(val)
+        s2Map = defaultdict(val)
+
+        def check(map1, map2):
+            for key in map1.keys():
+                if map1[key] != map2[key]:
+                    return False
+            return True
+
+        for letter in s1:
+            s1Map[letter] = s1Map[letter] + 1
+
+        l = 0
+        r = 0
+        while (r < len(s2)):
+            if r < len(s1):
+                s2Map[s2[r]] = s2Map[s2[r]] + 1
+                r += 1
+            else:
+                print(l, r)
+                s2Map[s2[l]] = s2Map[s2[l]] - 1
+                l += 1
+                s2Map[s2[r]] = s2Map[s2[r]] + 1
+                r += 1
+            if (check(s1Map, s2Map)):
+               return True
+
+        return False 
+
         
