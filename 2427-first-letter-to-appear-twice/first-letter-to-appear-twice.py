@@ -8,5 +8,5 @@ class Solution(object):
         for letter in s:
             if letter in found:
                 return letter 
-            found.add(letter)   
+            found.add(letter)
         
