@@ -7,6 +7,6 @@ class Solution(object):
         found = set()
         for letter in s:
             if letter in found:
-                return letter
+                return letter 
             found.add(letter) 
         
