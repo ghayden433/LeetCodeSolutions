@@ -11,7 +11,14 @@ class Solution:
             else:
                 opTwo = stack.pop()
                 opOne = stack.pop()
-                stack.append(str(int(eval(opOne + token + opTwo))))
+                if token == "+":
+                    stack.append(str(int(int(opOne) + int(opTwo))))
+                elif token == '-':
+                    stack.append(str(int(int(opOne) - int(opTwo))))
+                elif token == "*":
+                    stack.append(str(int(int(opOne) * int(opTwo))))
+                elif token == "/":
+                    stack.append(str(int(int(opOne) / int(opTwo))))
 
         return int(stack.pop())
                 
