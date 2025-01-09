@@ -4,16 +4,13 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        match = { "(": ")", "[": "]", "{": "}"}
-        matchkeys = "([{"
-        result = [""]
+        match = { ")": "(", "]": "[", "}": "{"}
+        result = list()
 
         for i in range (len(s)):
-            if s[i] in matchkeys:
-                result.append(match[s[i]])
-            elif s[i] == result[-1]:
-                result.pop()
-            else:
+            if s[i] in match.values():
+                result.append(s[i])
+            elif not result or match[s[i]] != result.pop():
                 return False
-            
-        return result == [""]
+
+        return result == []
