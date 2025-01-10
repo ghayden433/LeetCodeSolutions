@@ -19,7 +19,3 @@ class Solution(object):
             return
         genPar("(", 1, 0)
         return result
-
-
-
-        return result
